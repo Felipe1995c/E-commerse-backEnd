@@ -1,15 +1,30 @@
+const Sequelize = require('sequelize');
 require('dotenv').config();
 
-const Sequelize = require('sequelize');
+let sequelize;
 
-const sequelize = process.env.DB_URL
-  ? new Sequelize(process.env.DB_URL)
-  : new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+if(process.env.ecommerce_db) {
+  sequelize = new Sequelize(process.env.ecommerce_db);
+} else {
+  sequelize = new Sequelize(
+    process.env.DB_NAME,
+    process.env.DB_USER,
+    process.env.DB_PASSWORD,
+    {
       host: 'localhost',
-      dialect: 'postgres',
-      dialectOptions: {
-        decimalNumbers: true,
-      },
-    });
+      dialect: 'postgres'
+    }
+  );
+}
 
 module.exports = sequelize;
+
+// const sequelize = process.env.ecommerce_db
+//   ? new Sequelize(process.env.ecommerce_db)
+//   : new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+//       host: 'localhost',
+//       dialect: 'postgres',
+//       dialectOptions: {
+//         decimalNumbers: true,
+//       },
+//     });
