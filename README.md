@@ -34,11 +34,11 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Mock-Up
 
-The following video shows the application and its features. (insert video here).
+The following video shows the application and its features. [Demo Video](https://drive.google.com/file/d/1DAH6zWHqU6s9YpbvIdHK9XpLVd2fgtyk/view).
 
 ## Getting Started
 
-This Challenge will require a video submission. Refer to the Fullstack Blog Video Submission Guide for additional guidance on creating a video.
+This application will include a video submission. Refer to the link above "Demo video" for walkthrogh of app.
 
 You’ll need to use the "pg" and "Sequelize" packages to connect your Express.js API to a PostgreSQL database and the dotenv package to use environment variables to store sensitive data.
 
@@ -46,12 +46,17 @@ Use the schema.sql file in the db folder to create your database with PostgreSQL
 
 ## Installation 
 
-1. Install the dependencies "dotenv, express, mysql2, sequelize"
-2. Set up PostgreSQL database by using the "schema.sql" file in "db" folder.
-3. Fill in .env with password (if you have a password).
+1. Install the dependencies "dotenv, express, mysql2, sequelize" --- npm i
+2. Set up PostgreSQL database by using the "schema.sql" file in "db" folder. Then exit the postgres.
+3. Run npm run seed.
+4. Run npm run start
+
 
 ## Usage
 
-1. Start postgres and create database running schema.sql
-2. Run "npm run seed" to seed the database.
-3. Start the server with "npm start" or npm "server.js" 
+ Using Insomnia you can get all the endpoints and see the functionality of the get, put, post, and delete features.
+You can update specific tags, categories, and products. As well, as delete them. You can also create new tags, prodcucts, and categories. All this to be explored using insomnia.
+
+## License
+
+ This project is licensed under the MIT License.
